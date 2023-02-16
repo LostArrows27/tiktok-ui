@@ -1,19 +1,36 @@
-import logo from './logo.svg';
-import './';
+import '~/component/Globalstyle/GlobalStyles.scss';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+import { publicRoutes } from './routes';
+import { DefaultLayout } from './component/Layout';
+import { Fragment } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Typing <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {publicRoutes.map((a, b) => {
+            const Page = a.component;
+            let Layout = DefaultLayout;
+            if (a.layout) Layout = a.layout; // same as a.layout !== undefined, which mean, dont have a.layout
+            else if (a.layout === null) Layout = Fragment;
+            // if a route not have common point to another page, it will have null layout
+            // if a route have common point, it will have DefaultLayout (Header, Sidebar)
+            return (
+              <Route
+                key={b}
+                path={a.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              ></Route>
+            );
+          })}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
