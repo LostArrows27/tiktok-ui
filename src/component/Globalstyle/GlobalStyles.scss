@@ -7,6 +7,9 @@
   // Default Layout
   --defaultLayout-header-height: 60px;
   --defaultLayout-header-width: 1150px;
+  --black: #000;
+  --input-text-color: rgb(22, 24, 35);
+  --text-color: rgba(22, 24, 35, 1);
 }
 
 * {
@@ -19,9 +22,21 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
+  color: var(--text-color);
   text-rendering: optimizeSpeed;
 }
 
 html {
   font-size: 62.5%;
+}
+
+button,
+input,
+[tabindex] {
+  border: none;
+  outline: none;
+}
+
+a[href] {
+  color: var(--text-color);
 }
