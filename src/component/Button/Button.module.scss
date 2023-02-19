@@ -28,6 +28,12 @@
     margin-left: 8px;
 }
 
+.icon {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+
 // Button types
 .text {
   &:hover {
@@ -81,7 +87,8 @@
 
 // Button size
 .small {
-  min-width: 88px;
+  min-width: 100px;
+  // min-width: 88px // if error in UI
   padding: 4px 16px;
 }
 

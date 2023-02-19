@@ -6,9 +6,9 @@ const cx = classNames.bind(styles);
 // La 1 hop hover hien ra chung cho nhieu component
 // dac tinh rieng do 'children' quyet dinh
 
-function Wrapper({children}) {
+function Wrapper({children, className}) {
     return ( 
-        <div className={cx('wrapper')}>{children}</div>
+        <div className={cx('wrapper', className)}>{children}</div>
      );
 }
 

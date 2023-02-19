@@ -27,6 +27,7 @@ function Button({
   disabled = false,
   rounded = false,
   ...passProps
+  
 }) {
   let Comp = 'button';
 
