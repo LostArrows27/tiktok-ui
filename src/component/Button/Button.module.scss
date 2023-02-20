@@ -1,13 +1,14 @@
 .wrapper {
   font-size: 16px;
   font-weight: 700;
+  font-family: 'ProximaNova', sans-serif;
+  padding: 9px 16px;
   min-width: 100px;
   min-height: 36px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  padding: 9px 16px;
   text-decoration: none;
   background-color: var(--white);
   border: 1px solid transparent;
@@ -24,8 +25,9 @@
   }
 }
 
-.icon + .title, .title + .icon {
-    margin-left: 8px;
+.icon + .title,
+.title + .icon {
+  margin-left: 8px;
 }
 
 .icon {
@@ -62,7 +64,7 @@
 
   &:hover {
     border-color: var(--primary);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55; 
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
   }
 
   &:active {

@@ -18,13 +18,14 @@
   font-weight: 600;
   font-size: 16px;
   padding: 11px 16px;
+  color: rgba(22, 24, 35, 1);
 
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
   }
 
   &:nth-child(7) {
-    border-top:  1px solid rgba(22, 24, 35, 0.12);
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
   }
 }
 
