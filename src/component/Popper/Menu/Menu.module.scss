@@ -11,6 +11,7 @@
 }
 
 .menu-item {
+  line-height: 1.8rem;
   width: 100%;
   justify-content: flex-start;
   border-radius: 0;
@@ -21,4 +22,28 @@
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
   }
+
+  &:nth-child(7) {
+    border-top:  1px solid rgba(22, 24, 35, 0.12);
+  }
+}
+
+.header {
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  margin-top: -8px;
+}
+
+.back-btn {
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
