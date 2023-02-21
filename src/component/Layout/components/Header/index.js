@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
-import HeadlessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCircleXmark,
-  faSpinner,
-  faMagnifyingGlass,
   faEllipsisVertical,
   faEarthAsia,
   faKeyboard,
   faCircleQuestion,
-  faCloudUpload,
-  faMessage,
-  faPerson,
   faUser,
   faCoins,
   faGear,
@@ -23,12 +15,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
 import image from '~/assets/images';
-import { Wrapper as PopperWrapper } from '~/component/Popper';
-import AccountItem from '../AccountItem';
+
 import Button from '~/component/Button';
 import Menu from '~/component/Popper/Menu';
 import { MessageIcon, UploadIcon } from '../Icons';
 import Image from '~/component/Layout/components/Image';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 const MENU_ITEM = [
@@ -57,13 +49,6 @@ const MENU_ITEM = [
 ];
 
 function Header() {
-  const [searchResult, setSearchResult] = useState([]);
-
-  // khi call API tim kiem co ket qua
-  useEffect(() => {
-    setSearchResult([1, 2, 3]);
-  }, []);
-
   // Handle Logic
   const handleMenuChange = (menuItem) => {
     // xu li khi 1 item trong menu khong co children
@@ -77,7 +62,7 @@ function Header() {
     }
   };
 
-  const currentUser = true;
+  const currentUser = false;
   const userMenu = [
     { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/@hoa' },
     { icon: <FontAwesomeIcon icon={faGear} />, title: 'Settings', to: '/settings' },
@@ -92,34 +77,9 @@ function Header() {
         <div className={cx('logo')}>
           <img src={image.logo} alt="tikTok"></img>
         </div>
-        <HeadlessTippy
-          visible={searchResult.length > 0}
-          interactive={true}
-          render={(attrs) => (
-            <div tabIndex="-1" {...attrs} className={cx('search-result')}>
-              <PopperWrapper>
-                <h4 className={cx('search-title')}>Account</h4>
-                <AccountItem />
-                <AccountItem />
-                <AccountItem />
-                <AccountItem />
-                <AccountItem />
-              </PopperWrapper>
-            </div>
-          )}
-        >
-          <div className={cx('search')}>
-            <input placeholder="Search accounts and videos" spellCheck="false"></input>
-            <button className={cx('clear')}>
-              <FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon>
-            </button>
-            <FontAwesomeIcon icon={faSpinner} className={cx('spinner')}></FontAwesomeIcon>
 
-            <button className={cx('search-button')}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} className={cx('search-icon')}></FontAwesomeIcon>
-            </button>
-          </div>
-        </HeadlessTippy>
+        {/* Search Component */}
+        <Search />
 
         <div className={cx('action')}>
           {currentUser ? (
@@ -142,7 +102,10 @@ function Header() {
             </>
           ) : (
             <>
-              <Button text small>
+              {/* <Button text small>
+                Upload
+              </Button> */}
+              <Button className={cx('upload-btn', 'margin-left')} small leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                 Upload
               </Button>
               <Button primary small>

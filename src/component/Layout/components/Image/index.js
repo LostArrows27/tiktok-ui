@@ -1,15 +1,20 @@
-import { useState, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import image from '~/assets/images';
 
-function Image({ src, alt, fallBack = image.noImage, ...props }, ref) {
-  // fallBack => link to customize error image
-  const [_fallBack, setFallBack] = useState('');
+const Image = forwardRef(({ src, alt, className, fallback: customFallback = image.noImage, ...props }, ref) => {
+  return (
+    <img
+      className={className}
+      ref={ref}
+      src={src}
+      alt={alt}
+      {...props}
+      onError={({ currentTarget }) => {
+        currentTarget.onerror = null;
+        currentTarget.src = `${customFallback}`;
+      }}
+    />
+  );
+});
 
-  const handleError = () => {
-    setFallBack(fallBack);
-  };
-
-  return <img {...props} ref={ref} src={_fallBack || src} alt={alt} onError={handleError} />;
-}
-
-export default forwardRef(Image);
+export default Image;

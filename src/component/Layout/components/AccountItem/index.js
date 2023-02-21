@@ -3,25 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import Image from '../Image';
 import styles from './AccountItem.module.scss';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
+  if (data['full_name'].trim() === '') data['full_name'] = `User ${data.id}`;
   return (
-    <div className={cx('wrapper')}>
-      <Image
-        src="https://m.media-amazon.com/images/M/MV5BMzg3N2I3OTAtNThlYy00ZTM0LWFiMjItZmRkNzE3NWQ5MTg2XkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg"
-        alt="user"
-        className={cx('avatar')}
-      ></Image>
+    <Link className={cx('wrapper')} to={`/user/${data.nickname}`}>
+      <Image src={data.avatar} alt={data.full_name} className={cx('avatar')} />
       <div className={cx('info')}>
         <h4 className={cx('name')}>
-          <span>Nguyen Thanh Dung</span>
-          <FontAwesomeIcon className={cx('icon')} icon={faCheckCircle}></FontAwesomeIcon>
+          <span>{data['full_name']}</span>
+          {data.tick && <FontAwesomeIcon className={cx('icon')} icon={faCheckCircle}></FontAwesomeIcon>}
         </h4>
-        <span className={cx('username')}>lostarrows27</span>
+        <span className={cx('username')}>{data.nickname}</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
