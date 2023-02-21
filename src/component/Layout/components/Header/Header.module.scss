@@ -71,13 +71,21 @@
 .spinner {
   color: rgba(22, 24, 35, 0.34);
   padding: 0 12px 0 4px;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clear {
+  // display: none;
 }
 
 .spinner {
-  display: none;
-  animation: spin 1.5s linear infinite;
-  padding: 0;
-  margin-top: 8px;
+  // display: none;
+  // animation: spin 1.5s linear infinite;
+  // padding: 0;
+  // margin-top: 8px;
 
   @keyframes spin {
     from {
