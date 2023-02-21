@@ -1,6 +1,9 @@
-export const UploadIcon = ({ className, width = '2.6rem', height = '2.6rem' }) => {
+import { forwardRef } from 'react';
+
+export const UploadIcon = forwardRef(({ className, width = '2.6rem', height = '2.6rem' }, ref) => {
   return (
     <svg
+      ref={ref}
       className={className}
       width={width}
       data-e2e=""
@@ -16,11 +19,12 @@ export const UploadIcon = ({ className, width = '2.6rem', height = '2.6rem' }) =
       ></path>
     </svg>
   );
-};
+});
 
-export const MessageIcon = ({ className }) => {
+export const MessageIcon = forwardRef(({ className }, ref) => {
   return (
     <svg
+      ref={ref}
       className={className}
       width="32"
       data-e2e=""
@@ -36,4 +40,4 @@ export const MessageIcon = ({ className }) => {
       ></path>
     </svg>
   );
-};
+});

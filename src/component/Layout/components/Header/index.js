@@ -61,7 +61,7 @@ function Header() {
 
   // khi call API tim kiem co ket qua
   useEffect(() => {
-    setSearchResult([]);
+    setSearchResult([1, 2, 3]);
   }, []);
 
   // Handle Logic
@@ -133,8 +133,12 @@ function Header() {
               <Button className={cx('upload-btn')} small leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                 Upload
               </Button>
-              <UploadIcon />
-              <MessageIcon />
+              <Tippy delay={[0, 0]} content="Messages" placement="bottom" offset={[0, 14]}>
+                <UploadIcon className={cx('icon-menu')} />
+              </Tippy>
+              <Tippy delay={[0, 0]} content="Inbox" placement="bottom">
+                <MessageIcon className={cx('icon-menu')} />
+              </Tippy>
             </>
           ) : (
             <>

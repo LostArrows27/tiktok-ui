@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.icon-menu {
+  cursor: pointer;
+}
+
 .logo {
   display: flex;
   min-width: 300px;
@@ -170,6 +174,10 @@
 // Custom Button CSS
 .upload-btn {
   border: 1px solid rgba(22, 24, 35, 0.12) !important;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
   max-width: 114px;
   span {
     font-size: 1.6rem;
