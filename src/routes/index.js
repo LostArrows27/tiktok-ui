@@ -1,5 +1,5 @@
-import { HeaderOnly } from '~/component/Layout';
-import routesConfig from '~/config/routes';
+import { HeaderOnly } from '~/layouts';
+import config from '~/config';
 
 // Page
 import Home from '~/pages/Home';
@@ -11,12 +11,12 @@ import Search from '~/pages/Search';
 
 // Router khong can dang nhap cung xem duoc
 const publicRoutes = [
-  { path: routesConfig.root, component: Home },
-  { path: routesConfig.following, component: Following },
-  { path: routesConfig.user, component: Profile },
-  { path: routesConfig.search, component: Search, layout: null },
-  { path: routesConfig.upload, component: Upload, layout: HeaderOnly },
-  { path: routesConfig.notfound, component: NotFounded, layout: null },
+  { path: config.routes.root, component: Home },
+  { path: config.routes.following, component: Following },
+  { path: config.routes.user, component: Profile },
+  { path: config.routes.search, component: Search, layout: null },
+  { path: config.routes.upload, component: Upload, layout: HeaderOnly },
+  { path: config.routes.notfound, component: NotFounded, layout: null },
 ];
 
 // Router dang nhap moi xem duoc

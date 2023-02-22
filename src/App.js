@@ -1,7 +1,7 @@
 import '~/component/Globalstyle/GlobalStyles.scss';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 import { publicRoutes } from './routes';
-import { DefaultLayout } from './component/Layout';
+import { DefaultLayout } from '~/layouts';
 import { Fragment } from 'react';
 
 function App() {
