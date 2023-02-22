@@ -29,16 +29,25 @@
   border-top: 1px solid rgba(22, 24, 35, 0.12);
 }
 
+.languageMenu {
+  font-weight: 600;
+  color: #161823;
+  font-size: 14px;
+  padding-left: 24px;
+}
+
 .header {
   height: 50px;
   cursor: pointer;
   position: relative;
   margin-top: -8px;
+  flex-shrink: 0;
 }
 
 .back-btn {
   width: 50px;
   height: 100%;
+
   background-color: transparent;
 }
 

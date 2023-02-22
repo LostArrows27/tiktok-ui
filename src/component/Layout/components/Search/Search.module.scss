@@ -34,6 +34,16 @@
 .search-result {
   width: 361px;
 }
+
+.search-result {
+  max-height: min((100vh - 96px) - 60px, 734px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
 .search-title {
   padding: 5px 12px;
   font-size: 1.4rem;

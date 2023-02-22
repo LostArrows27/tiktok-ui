@@ -43,56 +43,6 @@ const MENU_ITEM = [
           type: 'language',
           title: 'Tiếng Việt',
         },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
-        {
-          code: 'vi',
-          type: 'language',
-          title: 'Tiếng Việt',
-        },
       ],
     },
   },
@@ -173,7 +123,7 @@ function Header() {
                 className={cx('user-avatar')}
                 src="https://static1.personality-database.com/profile_images/94f862375be441f7b59b496d24d2fae8.png"
                 alt="Nguyen Thanh Dung"
-                fallBack="https://m.media-amazon.com/images/M/MV5BMzg3N2I3OTAtNThlYy00ZTM0LWFiMjItZmRkNzE3NWQ5MTg2XkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg"
+                fallback="https://m.media-amazon.com/images/M/MV5BMzg3N2I3OTAtNThlYy00ZTM0LWFiMjItZmRkNzE3NWQ5MTg2XkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg"
               ></Image>
             ) : (
               <button className={cx('more-button')}>

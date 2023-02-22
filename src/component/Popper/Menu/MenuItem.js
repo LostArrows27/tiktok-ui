@@ -11,6 +11,7 @@ function MenuItem({ data, onClick }) {
       to={data.to}
       className={cx('menu-item', {
         seperate: data.seperate,
+        languageMenu: data.code,
       })}
       onClick={onClick}
     >
