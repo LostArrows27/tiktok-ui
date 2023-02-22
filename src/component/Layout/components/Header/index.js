@@ -114,13 +114,13 @@ function Header() {
     }
   };
 
-  const currentUser = false;
+  const currentUser = true;
   const userMenu = [
     { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/user/hoa' },
     { icon: <FontAwesomeIcon icon={faGear} />, title: 'Settings', to: '/settings' },
     { icon: <FontAwesomeIcon icon={faCoins} />, title: 'Get coins', to: '/getcoins' },
     ...MENU_ITEM,
-    { icon: <FontAwesomeIcon icon={faSignOut} />, title: 'Log out' },
+    { icon: <FontAwesomeIcon icon={faSignOut} />, title: 'Log out', seperate: true },
   ];
 
   return (

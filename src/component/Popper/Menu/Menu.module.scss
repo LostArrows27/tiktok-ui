@@ -23,10 +23,10 @@
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
   }
+}
 
-  &:nth-child(7) {
-    border-top: 1px solid rgba(22, 24, 35, 0.12);
-  }
+.seperate {
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
 }
 
 .header {
