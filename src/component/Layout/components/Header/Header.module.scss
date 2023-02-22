@@ -26,7 +26,19 @@
   display: flex;
   min-width: 300px;
   align-items: center;
+
+  a {
+    height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  a:active {
+    // border: 1px solid black;
+    outline: none;
+  }
 }
+
 // action
 .action {
   display: flex;
@@ -79,6 +91,6 @@
   }
 }
 
-.margin-left{
+.margin-left {
   margin-left: 5px;
 }

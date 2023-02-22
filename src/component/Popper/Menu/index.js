@@ -48,13 +48,14 @@ function Menu({ children, item = [], onChange = () => {} }) {
       // onHide={() => alert('hidden')}
       interactive
       delay={[0, 700]}
-      offset= {[16, 8]} // chinh ben trai / chieu cao so vs ban dau
+      offset={[16, 8]} // chinh ben trai / chieu cao so vs ban dau
       placement="bottom-end"
       render={(attrs) => (
         <div tabIndex="-1" {...attrs} className={cx('menu-lists')} ref={menu}>
           <PopperWrapper className={cx('menu-popper')}>
             {history.length > 1 && <Header title="Language" onBack={handleBackMenu} />}
-            {renderItem()}
+            <div className={cx('choice-wrapper')}>{renderItem()}</div>
+            {/* {renderItem()} */}
           </PopperWrapper>
         </div>
       )}

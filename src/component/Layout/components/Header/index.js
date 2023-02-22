@@ -15,12 +15,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
 import image from '~/assets/images';
+import routesConfig from '~/config/routes';
 
 import Button from '~/component/Button';
 import Menu from '~/component/Popper/Menu';
 import { MessageIcon, UploadIcon } from '../Icons';
 import Image from '~/component/Layout/components/Image';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const MENU_ITEM = [
@@ -35,6 +37,56 @@ const MENU_ITEM = [
           type: 'language',
           title: 'English',
           // can add children here if have another level menu
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
+        },
+        {
+          code: 'vi',
+          type: 'language',
+          title: 'Tiếng Việt',
         },
         {
           code: 'vi',
@@ -64,7 +116,7 @@ function Header() {
 
   const currentUser = false;
   const userMenu = [
-    { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/@hoa' },
+    { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/user/hoa' },
     { icon: <FontAwesomeIcon icon={faGear} />, title: 'Settings', to: '/settings' },
     { icon: <FontAwesomeIcon icon={faCoins} />, title: 'Get coins', to: '/getcoins' },
     ...MENU_ITEM,
@@ -74,8 +126,10 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <div className={cx('logo')}>
-          <img src={image.logo} alt="tikTok"></img>
+        <div className={cx('logo')} to="/">
+          <Link href="/" to={routesConfig.root}>
+            <img src={image.logo} alt="tikTok"></img>
+          </Link>
         </div>
 
         {/* Search Component */}

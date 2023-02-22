@@ -71,7 +71,12 @@ const Search = () => {
           spellCheck="false"
           value={searchValue}
           onChange={(e) => {
-            setSearchValue(e.target.value);
+            const regex = /^\S/;
+            if (regex.test(e.target.value)) {
+              setSearchValue(e.target.value);
+            } else {
+              setSearchValue('');
+            }
           }}
           onFocus={() => {
             setIsInputFocus(true);
@@ -84,7 +89,7 @@ const Search = () => {
         )}
         {!!loading && <FontAwesomeIcon icon={faSpinner} className={cx('spinner')}></FontAwesomeIcon>}
 
-        <button className={cx('search-button')}>
+        <button className={cx('search-button')} onMouseDown={(e) => e.preventDefault()}>
           <FontAwesomeIcon icon={faMagnifyingGlass} className={cx('search-icon')}></FontAwesomeIcon>
         </button>
       </div>
