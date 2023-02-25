@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
@@ -27,7 +28,6 @@ function Button({
   disabled = false,
   rounded = false,
   ...passProps
-  
 }) {
   let Comp = 'button';
 
@@ -63,5 +63,22 @@ function Button({
     </Comp>
   );
 }
+
+Button.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  leftIcon: PropTypes.node,
+  rightIcon: PropTypes.node,
+  className: PropTypes.string,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  primary: PropTypes.bool,
+  outline: PropTypes.bool,
+  text: PropTypes.bool,
+  disabled: PropTypes.bool,
+  rounded: PropTypes.bool,
+};
 
 export default Button;

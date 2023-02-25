@@ -105,7 +105,7 @@ const MENU_ITEM = [
         {
           code: 'ln',
           type: 'language',
-          title: 'Bahasa Indonesia (Indonesia)',
+          title: 'Indonesia (Indonesia)',
         },
         {
           code: 'ln',
@@ -135,7 +135,7 @@ const MENU_ITEM = [
         {
           code: 'ln',
           type: 'language',
-          title: 'Bahasa Melayu (Malaysia)',
+          title: 'Melayu (Malaysia)',
         },
         {
           code: 'ln',
@@ -261,7 +261,7 @@ function Header() {
               <Button className={cx('upload-btn')} small leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                 Upload
               </Button>
-              <Tippy delay={[0, 0]} content="Messages" placement="bottom" offset={[0, 14]}>
+              <Tippy delay={[0, 0]} content="Upload" placement="bottom" offset={[0, 14]}>
                 <UploadIcon className={cx('icon-menu')} />
               </Tippy>
               <Tippy delay={[0, 0]} content="Inbox" placement="bottom">
