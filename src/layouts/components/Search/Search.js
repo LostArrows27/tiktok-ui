@@ -19,23 +19,23 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const inputRef = useRef();
 
-  const debounced = useDebounce(searchValue, 500);
+  const debouncedValue = useDebounce(searchValue, 500);
 
   useEffect(() => {
-    if (!debounced.trim()) {
+    if (!debouncedValue.trim()) {
       setSearchResult([]);
       return;
     }
 
     setLoading(true);
     const fetchApi = async () => {
-      const res = await searchServices.searchUser(debounced);
+      const res = await searchServices.searchUser(debouncedValue);
       setSearchResult(res);
       setLoading(false);
     };
 
     fetchApi();
-  }, [debounced]);
+  }, [debouncedValue]);
 
   const handleHideResult = () => {
     setIsInputFocus(false);

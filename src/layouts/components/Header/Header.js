@@ -228,7 +228,7 @@ function Header() {
     }
   };
 
-  const currentUser = true;
+  const currentUser = false;
   const userMenu = [
     { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/user/hoa' },
     { icon: <FontAwesomeIcon icon={faGear} />, title: 'Settings', to: '/settings' },

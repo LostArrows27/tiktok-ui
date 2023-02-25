@@ -39,9 +39,20 @@ function Menu({ children, item = [], onChange = () => {} }) {
     setHistory(history.slice(0, history.length - 1));
   };
 
+  // after hover out of menu, reset menu to first page
   const handleOutofHoverMenu = () => {
-    setHistory([history[0]]);
+    setHistory([history[0]]); 
   };
+
+  const renderResult = (attrs) => (
+    <div tabIndex="-1" {...attrs} className={cx('menu-lists')} ref={menu}>
+      <PopperWrapper className={cx('menu-popper')}>
+        {history.length > 1 && <Header title={current.title} onBack={handleBackMenu} />}
+        <div className={cx('choice-wrapper')}>{renderItem()}</div>
+        {/* {renderItem()} */}
+      </PopperWrapper>
+    </div>
+  );
 
   return (
     <Tippy
@@ -51,15 +62,7 @@ function Menu({ children, item = [], onChange = () => {} }) {
       delay={[0, 700]}
       offset={[16, 8]} // chinh ben trai / chieu cao so vs ban dau
       placement="bottom-end"
-      render={(attrs) => (
-        <div tabIndex="-1" {...attrs} className={cx('menu-lists')} ref={menu}>
-          <PopperWrapper className={cx('menu-popper')}>
-            {history.length > 1 && <Header title={current.title} onBack={handleBackMenu} />}
-            <div className={cx('choice-wrapper')}>{renderItem()}</div>
-            {/* {renderItem()} */}
-          </PopperWrapper>
-        </div>
-      )}
+      render={renderResult}
     >
       {children}
     </Tippy>
