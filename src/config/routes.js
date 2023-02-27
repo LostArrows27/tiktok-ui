@@ -5,6 +5,7 @@ const routesConfig = {
   search: '/search',
   upload: '/upload',
   notfound: '*',
+  live: '/live',
 };
 
 export default routesConfig;

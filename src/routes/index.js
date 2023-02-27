@@ -8,6 +8,7 @@ import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import NotFounded from '~/pages/NotFounded';
 import Search from '~/pages/Search';
+import Live from '~/pages/Live';
 
 // Router khong can dang nhap cung xem duoc
 const publicRoutes = [
@@ -17,6 +18,7 @@ const publicRoutes = [
   { path: config.routes.search, component: Search, layout: null },
   { path: config.routes.upload, component: Upload, layout: HeaderOnly },
   { path: config.routes.notfound, component: NotFounded, layout: null },
+  { path: config.routes.live, component: Live },
 ];
 
 // Router dang nhap moi xem duoc
