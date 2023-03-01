@@ -5,7 +5,7 @@ function Menu({ children }) {
 }
 
 Menu.propTypes = {
-    children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 export default Menu;

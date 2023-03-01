@@ -158,6 +158,7 @@ export const LiveIcon = forwardRef(({ className, width = '3.2rem', height = '3.2
 });
 
 export const LiveIconActive = forwardRef(({ className, width = '3.2rem', height = '3.2rem' }, ref) => {
+  
   return (
     <svg
       ref={ref}

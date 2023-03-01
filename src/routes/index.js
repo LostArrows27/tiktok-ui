@@ -20,7 +20,6 @@ const publicRoutes = [
   { path: config.routes.notfound, component: NotFounded, layout: null },
   { path: config.routes.live, component: Live },
 ];
-
 // Router dang nhap moi xem duoc
 const privateRoutes = [];
 

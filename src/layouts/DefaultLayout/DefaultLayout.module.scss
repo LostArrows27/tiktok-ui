@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding: 24px 0;
+  position: relative;
 }
 
 .container {
@@ -14,4 +18,6 @@
 
 .content {
   flex: 1;
+  padding-left: 64px;
+  margin-left: 356px;
 }

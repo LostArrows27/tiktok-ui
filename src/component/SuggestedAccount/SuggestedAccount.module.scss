@@ -1,0 +1,66 @@
+.account-item {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 200ms ease-in-out 0s;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.wrapper {
+  border-top: 1px solid rgb(240, 240, 241);
+  padding: 16px 0;
+  //   max-width: 340px;
+}
+
+.image {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.label {
+  font-size: 1.4rem;
+  padding: 0 8px;
+  margin-bottom: 8px;
+  line-height: 20px;
+  color: rgba(22, 24, 35, 0.75);
+  font-weight: 600;
+}
+
+.item-info {
+  margin-left: 12px;
+  flex: 1;
+  height: 32px;
+}
+
+.nickname {
+  margin-top: 0;
+  line-height: 1;
+  font-size: 1.6rem;
+  color: #161823;
+}
+
+.icon {
+  font-style: 1.4rem;
+  margin-left: 4px;
+  color: rgb(32, 213, 236);
+}
+
+.name {
+  font-size: 1.2rem;
+  color: #161823bf;
+}
+
+.more-btn {
+  padding: 0px 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--primary);
+  font-weight: 600;
+}
