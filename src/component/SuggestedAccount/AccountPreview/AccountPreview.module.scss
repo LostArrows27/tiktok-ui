@@ -1,0 +1,86 @@
+.wrapper {
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+  border-radius: 8px;
+  width: 320px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+}
+
+.account-button {
+  max-height: 34px;
+  width: 106px;
+}
+
+.body {
+  margin-top: 12px;
+}
+.item {
+  font-size: 1.8rem;
+}
+
+
+.nickname {
+  strong {
+    color: rgb(22, 24, 35);
+    font-family: SofiaPro, Arial;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.nickname, .name, .avatar{
+    cursor: pointer;
+}
+
+.icon {
+  color: rgb(32, 213, 236);
+  margin-left: 4px;
+}
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.analystic {
+  padding-top: 8px;
+  font-size: 1.6rem;
+}
+.follower-count {
+  font-weight: 700;
+  margin-right: 6px;
+  font-size: 17px;
+  line-height: 20px;
+}
+.follower {
+  margin-right: 12px;
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+}
+.like-count {
+  font-weight: 700;
+  margin-right: 6px;
+  font-size: 17px;
+  line-height: 20px;
+}
+.like {
+  margin-right: 12px;
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-block;
+}

@@ -36,7 +36,6 @@ function Button({
     ...passProps,
   };
 
-
   if (to) {
     props.to = to;
     Comp = Link;
