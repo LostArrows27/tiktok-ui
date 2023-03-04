@@ -2,7 +2,7 @@
   width: 356px;
   padding: 20px 8px 26px 12px;
   max-height: 100vh;
-  overflow-y: auto;
+  // overflow-y: auto;
   overflow-y: auto;
   overscroll-behavior-y: contain;
   perspective: 1px;
@@ -16,5 +16,17 @@
 
   nav {
     margin-bottom: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    opacity: 0;
+    transition: all 1s;
+    will-change: background-color;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    background-color: rgba(22, 24, 35, 0.06);
   }
 }
