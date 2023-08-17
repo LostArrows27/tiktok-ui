@@ -29,6 +29,8 @@ function Sidebar() {
       </Menu>
       <SuggestedComponent label="Suggested accounts" buttonLabel="See all" />
       <SuggestedComponent label="Followed accounts" buttonLabel="See more" />
+      <SuggestedComponent label="Followed accounts" buttonLabel="See more" />
+      <SuggestedComponent label="Followed accounts" buttonLabel="See more" />
     </aside>
   );
 }

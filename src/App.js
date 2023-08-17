@@ -1,4 +1,4 @@
-import '~/component/GlobalStyle/GlobalStyles.scss'
+import '~/component/GlobalStyle/GlobalStyles.scss';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import { DefaultLayout } from '~/layouts';
